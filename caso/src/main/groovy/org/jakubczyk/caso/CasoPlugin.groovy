@@ -5,8 +5,13 @@ import org.gradle.api.Project
 
 class CasoPlugin implements Plugin<Project> {
 
+    File homeDirectory
+
     @Override
     void apply(Project target) {
+
+        homeDirectory = new File(System.getProperty("user.home"))
+
         /** TODO:
          1. setup android-sdk directory
          a) from ANDROID_HOME
